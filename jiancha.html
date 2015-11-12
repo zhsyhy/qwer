@@ -1,0 +1,18 @@
+﻿<table border=1 align="center" background="/site_media/02.gif">
+<p><h1>预约信息</h1></p>
+<a href="http://127.0.0.1:8000/">返回首页</a>
+ <tr>
+  <th>预约导师</th><th>学生姓名</th><th>预约日期</th><th>学生联系方式</th>
+ </tr>
+ {% for order in orderlist %}
+ <tr>
+  <td>{{ order.daoshi }}</td>
+  <td>{{ order.xingming}}</td>
+  <td>{{ order.orderdata}}</td>
+  <td>{{ order.telephone}}</td>
+
+ </tr>
+ {% endfor %}
+
+</table>
+<a href="http://127.0.0.1:8000/">返回首页</a>

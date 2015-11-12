@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>填写信息</title>
+</head>
+  <body align="center" background="/site_media/02.gif"  >
+    <a href="http://127.0.0.1:8000/">退出登录</a>
+    <p><h1>输入修改内容</h1></p>
+    
+  </body>
+</html>
+
+<form method="post">
+{% csrf_token %}
+<table border=1 align="center" background="/site_media/3.gif"> 
+  <tr><td>姓名<input name="Name" type="text" value="{{user_list.Name}}" ></td></tr>
+  <tr><td>电子邮箱<input name="Email" type="text" value="{{user_list.Email}}" ></td></tr>
+  <tr><td>联系方式<input name="Phone" type="text" value="{{user_list.Phone}}"></td></tr>
+  <tr><td>从事领域<select name="Study" >
+  <option >海量数据计算</option>
+  <option >计算机语言基础教研</option>
+  <option >生物计算研究</option>
+  <option >计算机网络与信息安全</option>
+  <option >模式识别研究</option>
+  <option >多智能机器人研究</option>
+  <option >容错与移动计算研究</option>
+  <option >智能接口与人机交互研究</option>
+  </td></tr>
+  <tr><td>实验室<input name="Labroom" type="text" value="{{user_list.Labroom}}"></td></tr>
+  <tr><td>办公地点<input name="Workroom" type="text" value="{{user_list.Workroom}}"></td></tr>
+  <tr><td>科研成果<input name="Achievement" type="text" value="{{user_list.Achievement}}"></td></tr>
+  <tr><td>行程<input name="Date" type="text" value="{{user_list.Date}}"></td></tr>
+  <tr><td><input type="submit" value="保存"> <input type="reset" value="重填"></td></tr>
+ </tr>
+</table>
+</form>
+</table>
