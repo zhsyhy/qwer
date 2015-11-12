@@ -1,4 +1,4 @@
-efgfrom django.db import models
+efrom django.db import models
 
 # Create your models here.
 class User(models.Model):
